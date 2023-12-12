@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif, 'Concert One';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  background-color: #fafafa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#carousel{
+  max-height: 500px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.hide{display: none;}
+.login-popup{
+  position: absolute;
+  height: 30em;
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+  background-color: white;
+  bottom: 0;
+  transform: scale(1);
+  transform: 1.5s;
+}
+
+
+
+.login-btn{
+  width: 40%;
+  height: 2em;
+background-color: #feeafa;
+  transition: 0.5s;
+  border-radius: 0.25em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px
+}
+
+.login-btn:hover{transform: scale(1.25);}
+
+
+#create-account  {
+  width: 100%;
+  height: 2em;
+  justify-content: center;
+  transition: 0.5s;
+  border-radius: 0.25em;
+}
+
+
+
+.text{
+  position: relative;
+  bottom: -2em;
+
+}
+
+
+.page{
+  height: 100vh;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+  
+}
+.cover{
+  background-color: white;
+  width: 30em;
+  height: 35em;
+  position: relative;
+  box-shadow: 0 0.188em 0.5em rgb(156, 156, 156); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px
+}
+.login-heading {
+  /* Add margin to push the heading away from the form */
+  margin-bottom: 50px;
+  
+}
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.form-control {
+  background-color: white !important;
+  color: #000 !important;
+}
+.cover-1{
+  background-color: white;
+  width: 30em;
+  height: 40em;
+  position: relative;
+  box-shadow: 0 0.188em 0.5em rgb(156, 156, 156); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px
+}
+
+#carousel{
+  max-height: 600px;
+  
+}
+
+#nav-login-btn:hover{transform: scale(1.25);
+}
+
+#nav-signup-btn:hover{transform: scale(1.25);
+}
+#nav-login-btn,#nav-signup-btn,#track_btn{
+transition: 0.5s;
+border-radius: 0.25em;
+cursor: pointer;
+align-items: center;
+justify-content: center;}
+
+.btn:hover{transform: scale(1.25)!important;}
+.btn{
+  transition: 0.5s !important;
+  border-radius: 0.25em;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;}
+
+  .order-container {
+    border-bottom: 1px solid #ccc; /* Add a bottom border to separate the order items */
+    margin-bottom: 20px; /* Add some space between each set of order items */
+    padding-bottom: 20px; /* Add some padding at the bottom to space out the border */
+  }
