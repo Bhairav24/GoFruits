@@ -9,7 +9,7 @@ const bcrypt=require('bcryptjs');
 
 const jwt=require("jsonwebtoken")
 
-const jwtSecret="ThisIsMyFirstMernProjectdevan$#";
+const jwtSecret=process.env.JWT_SECRET;
 const {body, validationResult}=require('express-validator')
 
 router.post('/create',
