@@ -49,7 +49,7 @@ app.use(express.json());
 
 // Custom middleware to set headers for CORS
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', `${process.env.BASE_URL}`);
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
  // res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Set the allowed HTTP methods
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // Set the allowed headers
