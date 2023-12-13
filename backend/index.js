@@ -1,4 +1,5 @@
 
+import { useContext } from 'react';
 
 // const express=require ('express');
 
@@ -49,7 +50,15 @@ app.use(express.json());
 
 // Custom middleware to set headers for CORS
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+
+  const allowedOrigins = ['http://localhost:3000', 'https://comfy-starburst-3bc2fb.netlify.app/'];
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  
  // res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Set the allowed HTTP methods
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // Set the allowed headers
@@ -61,10 +70,10 @@ app.get('/', (req, res) => {
   res.send('Hello world');
 });
 
-app.get('/api', require('./routes/CreateUser.js'));
+app.use('/api', require('./routes/CreateUser.js'));
 
-app.get('/api',require('./routes/DisplayData.js'))
-app.get('/api', require('./models/routes/OrderData.js'));
+app.use('/api',require('./routes/DisplayData.js'))
+app.use('/api', require('./models/routes/OrderData.js'));
 
 app.listen(port, () => {
   console.log('Server is listening on port');
