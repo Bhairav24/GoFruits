@@ -108,14 +108,14 @@ export default function SignUp() {
   
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "", location: "" });
   let navigate = useNavigate();
-  const BACKURL = process.env.CONNECT_TO_BACK_URL;
+//  const BACKURL = process.env.CONNECT_TO_BACK_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       console.log(JSON.stringify({ name: credentials.name, password: credentials.password, email: credentials.email, location: credentials.location }));
 
-      const response = await fetch("http://localhost:5000/api/create", {
+      const response = await fetch("https://gofruits.onrender.com/api/create", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -147,7 +147,7 @@ export default function SignUp() {
       const { latitude, longitude } = position.coords;
       console.log(latitude, longitude);
 
-      const response = await fetch("http://localhost:5000/api/getlocation", {
+      const response = await fetch("https://gofruits.onrender.com/api/getlocation", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

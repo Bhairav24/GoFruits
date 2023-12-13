@@ -467,7 +467,7 @@ export default function Cart() {
   const [showNotification, setShowNotification] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   
-  const BACKURL=process.env.CONNECT_TO_BACK_URL;
+  //const BACKURL=process.env.CONNECT_TO_BACK_URL;
    
  // http://localhost:5000
 
@@ -476,7 +476,7 @@ export default function Cart() {
       return;
     }
     else{ let userEmail = localStorage.getItem('authEmail');
-    await fetch("http://localhost:5000/api/orderData", {
+    await fetch("https://gofruits.onrender.com/api/orderData", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

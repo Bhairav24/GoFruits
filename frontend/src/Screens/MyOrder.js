@@ -241,12 +241,12 @@ import Navbar from '../components/Navbar';
 export default function MyOrder() {
   const [orderData, setOrderData] = useState('');
 
-  const BACKURL = process.env.CONNECT_TO_BACK_URL;
+  //const BACKURL = process.env.CONNECT_TO_BACK_URL;
  
   const fetchMyOrder = async () => {
     console.log(localStorage.getItem('authEmail'));
 
-    await fetch("http://localhost:5000/api/myOrderData", {
+    await fetch("https://gofruits.onrender.com/api/myOrderData", {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
