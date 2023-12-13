@@ -112,13 +112,13 @@ export default function Login() {
 
   const [credentials, setCredentials] = useState({ email: '', password: '' });
   let navigate = useNavigate();
-
+  //const BACKURL = process.env.CONNECT_TO_BACK_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log(JSON.stringify({ email: credentials.email, password: credentials.password }));
 
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch("http://localhost:5000/api/login", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

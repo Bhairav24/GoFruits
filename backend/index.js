@@ -61,10 +61,10 @@ app.get('/', (req, res) => {
   res.send('Hello world');
 });
 
-app.use('/api', require('./routes/CreateUser.js'));
+app.get('/api', require('./routes/CreateUser.js'));
 
-app.use('/api',require('./routes/DisplayData.js'))
-app.use('/api', require('./models/routes/OrderData.js'));
+app.get('/api',require('./routes/DisplayData.js'))
+app.get('/api', require('./models/routes/OrderData.js'));
 
 app.listen(port, () => {
   console.log('Server is listening on port');

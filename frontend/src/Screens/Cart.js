@@ -454,9 +454,11 @@
 // }
 import React, { useState } from 'react';
 import { useDispatchCart, useCart } from '../components/ContextReducer';
-import trash from '../images/trash.svg';
+//import trash from 'frontend/src/images/trash.svg';
 import Notification from '../components/Notification';
 import PaymentOptionsModal from '../components/PaymentOptionsModal';
+import { trash } from '../images/trash.svg';
+
 
 export default function Cart() {
   let data = useCart();
@@ -465,16 +467,16 @@ export default function Cart() {
   const [showNotification, setShowNotification] = useState(false);
   const [showPaymentModal, setShowPaymentModal] = useState(false);
   
-  
+  const BACKURL=process.env.CONNECT_TO_BACK_URL;
    
-
+ // http://localhost:5000
 
   const handleCheckout = async () => {
     if (data.length === 0) {
       return;
     }
     else{ let userEmail = localStorage.getItem('authEmail');
-    await fetch('http://localhost:5000/api/orderData', {
+    await fetch("http://localhost:5000/api/orderData", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

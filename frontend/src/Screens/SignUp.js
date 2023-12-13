@@ -108,7 +108,7 @@ export default function SignUp() {
   
   const [credentials, setCredentials] = useState({ name: "", email: "", password: "", location: "" });
   let navigate = useNavigate();
-
+  const BACKURL = process.env.CONNECT_TO_BACK_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -134,7 +134,7 @@ export default function SignUp() {
         navigate("/login");
       }
     } catch (error) {
-      alert("Error creating user");
+      alert("Error while creating user");
     }
   }
 
